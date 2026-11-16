@@ -202,10 +202,10 @@ export const GettingStartedImportPreview = () => {
         <StyledSide>
           <StyledSideHeader>
             <StyledTwentyLogo
-              src="/images/integrations/twenty-logo.svg"
+              src="/images/grix/logo.png"
               alt=""
             />
-            {t`Twenty fields`}
+            {t`GRIX CRM fields`}
           </StyledSideHeader>
           {TARGET_FIELDS.map((field) => (
             <StyledPill key={field.id} data-side="target">

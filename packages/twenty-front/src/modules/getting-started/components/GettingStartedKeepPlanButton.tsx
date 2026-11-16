@@ -34,11 +34,11 @@ export const GettingStartedKeepPlanButton = ({
         startIcon={<IconCreditCard />}
         onClick={() => openDialog(modalInstanceId)}
       >
-        {t`Keep Twenty`}
+        {t`Keep GRIX CRM`}
       </Button>
       <UpdatePaymentMethodModal
         modalInstanceId={modalInstanceId}
-        title={t`Keep Twenty`}
+        title={t`Keep GRIX CRM`}
         description={getGettingStartedKeepPlanDescription({
           planLabel,
           formattedTrialEnd,

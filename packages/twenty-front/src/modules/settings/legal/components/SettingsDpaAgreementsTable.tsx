@@ -36,7 +36,7 @@ export const SettingsDpaAgreementsTable = ({
     try {
       await downloadFile(
         agreement.downloadUrl,
-        `Twenty-DPA-${agreement.templateVersion}-${agreement.customerLegalEntityName ?? 'copy'}.pdf`,
+        `GRIX CRM-DPA-${agreement.templateVersion}-${agreement.customerLegalEntityName ?? 'copy'}.pdf`,
       );
     } catch {
       enqueueToast({

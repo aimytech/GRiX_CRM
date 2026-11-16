@@ -2,8 +2,7 @@ import { Injectable, Logger } from '@nestjs/common';
 import { InjectDataSource, InjectRepository } from '@nestjs/typeorm';
 
 import { msg } from '@lingui/core/macro';
-import { TWENTY_ICONS_BASE_URL } from 'twenty-shared/constants';
-import { isDefined } from 'twenty-shared/utils';
+import { isDefined, getLogoUrlFromDomainName } from 'twenty-shared/utils';
 import { WorkspaceActivationStatus } from 'twenty-shared/workspace';
 import {
   IsNull,
@@ -639,7 +638,17 @@ export class SignInUpService {
     let uploadedLogoFileId: string | undefined;
 
     try {
-      const logoUrl = `${TWENTY_ICONS_BASE_URL}/${getDomainFromEmailOrThrow(email)}`;
+      const logoUrl = getLogoUrlFromDomainName(
+        getDomainFromEmailOrThrow(email),
+      );
+
+      if (
+        !isDefined(logoUrl) ||
+        !logoUrl.startsWith('https://twenty-icons.com/')
+      ) {
+        return;
+      }
+
       const logoFile =
         await this.fileCorePictureService.uploadWorkspaceLogoFromUrl({
           imageUrl: logoUrl,

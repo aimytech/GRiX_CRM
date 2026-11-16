@@ -11,24 +11,24 @@ export const MARKETPLACE_BUILT_IN_APPLICATIONS: MarketplaceBuiltInApplication[] 
         MARKETPLACE_BUILT_IN_APPLICATION_UNIVERSAL_IDENTIFIERS.CLAUDE,
       name: 'Claude',
       description:
-        'Search, create and update your Twenty records from a Claude conversation.',
+        'Search, create and update your GRIX CRM records from a Claude conversation.',
       aboutDescription:
-        'Connect Claude to Twenty to work with your records from a conversation. Each member connects their own Claude account, and Claude acts with that member’s permissions.',
+        'Connect Claude to GRIX CRM to work with your records from a conversation. Each member connects their own Claude account, and Claude acts with that member’s permissions.',
       author: 'Anthropic',
       category: 'Productivity',
       logoPath: '/images/oauth-clients/claude.webp',
       coverImagePath: '/images/oauth-clients/covers/claude.webp',
       websiteUrl: 'https://claude.ai',
-      connectUrl: `https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=Twenty&connectorUrl=${MARKETPLACE_APP_MCP_SERVER_URL_PLACEHOLDER}`,
+      connectUrl: `https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=GRIX CRM&connectorUrl=${MARKETPLACE_APP_MCP_SERVER_URL_PLACEHOLDER}`,
     },
     {
       universalIdentifier:
         MARKETPLACE_BUILT_IN_APPLICATION_UNIVERSAL_IDENTIFIERS.CHATGPT,
       name: 'ChatGPT',
       description:
-        'Search, create and update your Twenty records from a ChatGPT conversation.',
+        'Search, create and update your GRIX CRM records from a ChatGPT conversation.',
       aboutDescription:
-        'Connect ChatGPT to Twenty to work with your records from a conversation. Each member connects their own ChatGPT account, and ChatGPT acts with that member’s permissions.',
+        'Connect ChatGPT to GRIX CRM to work with your records from a conversation. Each member connects their own ChatGPT account, and ChatGPT acts with that member’s permissions.',
       author: 'OpenAI',
       category: 'Productivity',
       logoPath: '/images/oauth-clients/chatgpt.webp',
@@ -41,10 +41,10 @@ export const MARKETPLACE_BUILT_IN_APPLICATIONS: MarketplaceBuiltInApplication[] 
       universalIdentifier:
         MARKETPLACE_BUILT_IN_APPLICATION_UNIVERSAL_IDENTIFIERS.TWENTY_CLI,
       name: TWENTY_CLI_APPLICATION_REGISTRATION.name,
-      description: 'Build, run and deploy Twenty apps from your terminal.',
+      description: 'Build, run and deploy GRIX CRM apps from your terminal.',
       aboutDescription:
-        'The Twenty CLI scaffolds an app, runs it against your workspace while you develop, and deploys it. You sign in from the terminal, and the CLI acts with your permissions.',
-      author: 'Twenty',
+        'The GRIX CRM CLI scaffolds an app, runs it against your workspace while you develop, and deploys it. You sign in from the terminal, and the CLI acts with your permissions.',
+      author: 'GRIX CRM',
       category: 'Developer tools',
       logoPath: '/images/oauth-clients/twenty-cli.svg',
       coverImagePath: '/images/oauth-clients/covers/twenty-cli.webp',

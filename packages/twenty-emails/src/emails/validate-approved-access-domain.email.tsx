@@ -37,9 +37,10 @@ export const SendApprovedAccessDomainValidation = ({
   locale,
 }: SendApprovedAccessDomainValidationProps) => {
   const i18n = createI18nInstance(locale);
-  const workspaceLogo = workspace.logo
-    ? getImageAbsoluteURI({ imageUrl: workspace.logo, baseUrl: serverUrl })
-    : null;
+  const workspaceLogo = getImageAbsoluteURI({
+    imageUrl: workspace.logo ?? DEFAULT_WORKSPACE_LOGO,
+    baseUrl: serverUrl,
+  });
 
   const senderName = capitalize(sender.firstName);
   const senderEmail = sender.email;
@@ -66,7 +67,7 @@ export const SendApprovedAccessDomainValidation = ({
       </MainText>
       <HighlightedContainer>
         <Img
-          src={workspaceLogo ?? DEFAULT_WORKSPACE_LOGO}
+          src={workspaceLogo ?? ''}
           width={40}
           height={40}
           alt={workspace.name ?? i18n._('Workspace logo')}

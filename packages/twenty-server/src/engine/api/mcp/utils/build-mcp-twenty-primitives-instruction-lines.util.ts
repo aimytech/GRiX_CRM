@@ -9,12 +9,12 @@ export const buildMcpTwentyPrimitivesInstructionLines = ({
   hasFileUploadTools: boolean;
   fileUploadUsageLine: string;
 }): string[] => [
-  `Twenty primitives:`,
+  `GRIX CRM primitives:`,
   `  Favorites are navigation menu items. To favorite something, call create_navigation_menu_item with scope: 'user'.`,
   `  A default OBJECT navigation item is auto-created with create_object_metadata — do not add another.`,
   ...(hasHttpRequestTool
     ? [
-        `  http_request is ONLY for external third-party APIs, never for Twenty's own data.`,
+        `  http_request is ONLY for external third-party APIs, never for GRIX CRM's own data.`,
       ]
     : []),
   ...(hasFileUploadTools

@@ -57,7 +57,7 @@ export const mockGettingStartedStepDefinitions: GettingStartedProgressQuery['get
       kind: GettingStartedStepKind.CUSTOM,
       title: 'Invite your team',
       doneTitle: 'Invitations sent',
-      description: 'Bring your team into Twenty.',
+      description: 'Bring your team into GRIX CRM.',
       doneDescription: 'Invites are out. Bring in more people anytime.',
       icon: 'IconUsers',
       iconColor: 'orange',

@@ -29,6 +29,7 @@ const StyledContainer = styled.div`
 const StyledSecondaryLogo = styled.img`
   border-radius: ${themeCssVariables.border.radius.xs};
   height: ${themeCssVariables.spacing[6]};
+  object-fit: contain;
   width: ${themeCssVariables.spacing[6]};
 `;
 
@@ -47,10 +48,18 @@ const StyledSecondaryLogoContainer = styled.div`
 `;
 
 const StyledPrimaryLogo = styled.div`
-  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   height: 100%;
   width: 100%;
 `;
+
+const isDefaultGrixLogoUrl = (url?: string | null) =>
+  isNonEmptyString(url) &&
+  (url.includes('/images/grix/') ||
+    url.includes('android-launchericon') ||
+    url.includes('placeholder-images/workspaces/twenty-logo'));
 
 export const Logo = ({
   primaryLogo,
@@ -60,7 +69,7 @@ export const Logo = ({
   to = AppPath.SignInUp,
 }: LogoProps) => {
   const { redirectToDefaultDomain } = useRedirectToDefaultDomain();
-  const defaultPrimaryLogoUrl = `${window.location.origin}/images/icons/android/android-launchericon-192-192.png`;
+  const defaultPrimaryLogoUrl = `${window.location.origin}/images/grix/logo.png`;
 
   const primaryLogoUrl = getImageAbsoluteURI({
     imageUrl: primaryLogo ?? defaultPrimaryLogoUrl,
@@ -75,6 +84,12 @@ export const Logo = ({
     : null;
 
   const isUsingDefaultLogo = !isDefined(primaryLogo);
+  const shouldShowSecondaryLogo =
+    !isUsingDefaultLogo &&
+    isDefined(secondaryLogoUrl) &&
+    !isDefaultGrixLogoUrl(secondaryLogoUrl) &&
+    secondaryLogoUrl !== primaryLogoUrl &&
+    secondaryLogoUrl !== defaultPrimaryLogoUrl;
 
   return (
     <StyledContainer onClick={() => onClick?.()}>
@@ -89,11 +104,12 @@ export const Logo = ({
           style={{ backgroundImage: `url(${primaryLogoUrl})` }}
         />
       )}
-      {isDefined(secondaryLogoUrl) ? (
+      {shouldShowSecondaryLogo ? (
         <StyledSecondaryLogoContainer>
           <StyledSecondaryLogo src={secondaryLogoUrl} />
         </StyledSecondaryLogoContainer>
       ) : (
+        !isUsingDefaultLogo &&
         isDefined(placeholder) && (
           <StyledSecondaryLogoContainer>
             <Avatar

@@ -255,7 +255,7 @@ export class ApplicationRegistrationClaimService {
       const response = await axios.get(
         `${registryUrl}/-/npm/v1/attestations/${encodedName}@${encodedVersion}`,
         {
-          headers: { 'User-Agent': 'Twenty-Marketplace' },
+          headers: { 'User-Agent': 'GRIX CRM-Marketplace' },
           timeout: 10_000,
         },
       );
@@ -344,7 +344,7 @@ export class ApplicationRegistrationClaimService {
 
     try {
       const { data } = await axios.get(`${registryUrl}/${encodedName}/latest`, {
-        headers: { 'User-Agent': 'Twenty-Marketplace' },
+        headers: { 'User-Agent': 'GRIX CRM-Marketplace' },
         timeout: 10_000,
       });
 
@@ -406,7 +406,7 @@ export class ApplicationRegistrationClaimService {
     const headers = {
       Authorization: `Bearer ${params.accessToken}`,
       Accept: 'application/vnd.github+json',
-      'User-Agent': 'Twenty-Marketplace',
+      'User-Agent': 'GRIX CRM-Marketplace',
     };
 
     let viewerLogin: string;
