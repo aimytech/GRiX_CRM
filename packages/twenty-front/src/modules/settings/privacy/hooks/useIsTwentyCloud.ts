@@ -2,7 +2,7 @@ import { billingState } from '@/client-config/states/billingState';
 import { isMultiWorkspaceEnabledState } from '@/client-config/states/isMultiWorkspaceEnabledState';
 import { useAtomStateValue } from '@/ui/utilities/state/jotai/hooks/useAtomStateValue';
 
-// self-hosters can enable multi-workspace mode, but not Twenty's billing, so both together mean Twenty Cloud
+// self-hosters can enable multi-workspace mode, but not GRIX CRM's billing, so both together mean GRIX CRM Cloud
 export const useIsTwentyCloud = () => {
   const isMultiWorkspaceEnabled = useAtomStateValue(
     isMultiWorkspaceEnabledState,

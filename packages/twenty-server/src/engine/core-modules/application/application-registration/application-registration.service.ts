@@ -1067,7 +1067,7 @@ export class ApplicationRegistrationService {
 
     if (!isDefined(registration)) {
       throw new ApplicationException(
-        'Failed to create the Twenty CLI application registration',
+        'Failed to create the GRIX CRM CLI application registration',
         ApplicationExceptionCode.APPLICATION_NOT_FOUND,
       );
     }

@@ -1,3 +1,5 @@
+const GRIX_LOGO_PATH = '/images/grix/logo.png';
+
 export const sanitizeURL = (link: string | null | undefined) => {
   return link
     ? link
@@ -7,11 +9,24 @@ export const sanitizeURL = (link: string | null | undefined) => {
     : '';
 };
 
+const isGrixSalesDomain = (domain: string) => {
+  const host = domain.toLowerCase();
+
+  return host === 'grixsales.com' || host.endsWith('.grixsales.com');
+};
+
 export const getLogoUrlFromDomainName = (
   domainName?: string,
 ): string | undefined => {
   const sanitizedDomain = sanitizeURL(domainName);
-  return sanitizedDomain
-    ? `https://twenty-icons.com/${sanitizedDomain}`
-    : undefined;
+
+  if (!sanitizedDomain) {
+    return undefined;
+  }
+
+  if (isGrixSalesDomain(sanitizedDomain)) {
+    return GRIX_LOGO_PATH;
+  }
+
+  return `https://twenty-icons.com/${sanitizedDomain}`;
 };

@@ -558,7 +558,7 @@ export const mockedEventLogRecordsByTable: Partial<
   [EventLogTable.PAGEVIEW]: [
     {
       __typename: 'EventLogRecord',
-      event: 'Twenty',
+      event: 'GRIX CRM',
       timestamp: '2026-09-24T11:59:02.114Z',
       userId: PRIYA_NAIR.userId,
       recordId: null,
@@ -573,7 +573,7 @@ export const mockedEventLogRecordsByTable: Partial<
     },
     {
       __typename: 'EventLogRecord',
-      event: 'Twenty',
+      event: 'GRIX CRM',
       timestamp: '2026-09-24T11:52:40.870Z',
       userId: SARAH_CHEN.userId,
       recordId: null,

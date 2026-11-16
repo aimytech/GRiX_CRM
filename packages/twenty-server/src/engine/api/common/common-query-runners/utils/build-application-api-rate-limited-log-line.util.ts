@@ -2,7 +2,7 @@ import { type ApplicationWorkspaceAuthContext } from 'src/engine/core-modules/au
 import { type ExhaustedScope } from 'src/engine/core-modules/usage-limit/types/exhausted-scope.type';
 import { toLogfmt } from 'src/engine/utils/to-logfmt.util';
 
-// The Twenty / Applications Grafana dashboard filters Loki on this message and
+// The GRIX CRM / Applications Grafana dashboard filters Loki on this message and
 // reads app_name, universal_identifier and workspace_id with logfmt, so keep
 // both stable
 export const buildApplicationApiRateLimitedLogLine = ({

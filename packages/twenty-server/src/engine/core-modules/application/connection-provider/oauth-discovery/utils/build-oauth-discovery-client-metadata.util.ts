@@ -7,7 +7,7 @@ const TWENTY_WEBSITE_URL = 'https://twenty.com';
 export const buildOAuthDiscoveryClientMetadata = (
   serverUrl: string,
 ): OAuthClientMetadata => ({
-  client_name: 'Twenty',
+  client_name: 'GRIX CRM',
   client_uri: TWENTY_WEBSITE_URL,
   redirect_uris: [buildAppOAuthCallbackUrl(serverUrl)],
   grant_types: ['authorization_code', 'refresh_token'],

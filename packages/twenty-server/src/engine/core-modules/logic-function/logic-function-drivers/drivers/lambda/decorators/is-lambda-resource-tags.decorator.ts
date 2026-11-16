@@ -14,7 +14,7 @@ export class IsLambdaResourceTagsConstraint implements ValidatorConstraintInterf
   }
 
   defaultMessage() {
-    return 'Lambda resource tags must be a JSON object with at most 48 string values, valid AWS tag characters, keys of 1–128 characters and values of at most 256 characters; aws: prefixes and Twenty checksum keys are reserved';
+    return 'Lambda resource tags must be a JSON object with at most 48 string values, valid AWS tag characters, keys of 1–128 characters and values of at most 256 characters; aws: prefixes and GRIX CRM checksum keys are reserved';
   }
 }
 

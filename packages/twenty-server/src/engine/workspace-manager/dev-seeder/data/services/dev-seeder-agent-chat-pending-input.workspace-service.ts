@@ -189,13 +189,13 @@ const FIGMA_CALL_FIELDS: RequestFormField[] = [
 
 const LINEAR_WELCOME_EMAIL: SeededEmail = {
   to: 'ops@linear.app',
-  subject: 'Welcome to Twenty, Linear',
+  subject: 'Welcome to GRIX CRM, Linear',
   body: '<p>Hi Linear team,</p><p>Welcome aboard! Phil will run your onboarding: expect a kickoff invite from him this week, with SSO and your data import on the agenda.</p><p>Best,<br>Tim</p>',
 };
 
 const FIGMA_WELCOME_EMAIL: SeededEmail = {
   to: 'it@figma.com',
-  subject: 'Welcome to Twenty, Figma',
+  subject: 'Welcome to GRIX CRM, Figma',
   body: '<p>Hi Figma team,</p><p>Welcome aboard! Your workspace is ready, and we will start with the pipeline import you asked about on our last call.</p><p>Best,<br>Tim</p>',
 };
 
@@ -325,7 +325,7 @@ const CONVERSATIONS_TO_SEED: ConversationToSeed[] = [
     threadId: AGENT_CHAT_PENDING_INPUT_THREAD_DATA_SEED_IDS.PENDING_FORM,
     title: 'Open the Airbnb expansion deal',
     askedBy: 'TIM',
-    prompt: 'Airbnb wants to roll Twenty out to their EMEA team. Log the deal.',
+    prompt: 'Airbnb wants to roll GRIX CRM out to their EMEA team. Log the deal.',
     intro: 'Fill in the deal details and I will create the opportunity:',
     calls: [requestFormCall(AIRBNB_EXPANSION_FIELDS)],
   },

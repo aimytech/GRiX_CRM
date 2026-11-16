@@ -4,13 +4,13 @@ import { type DpaRegionConfig } from 'src/engine/core-modules/dpa/types/dpa.type
 export const DEFAULT_DPA_REGION: DpaRegion = DpaRegion.EU;
 
 const DPA_COMMON_VALUES = {
-  PROCESSOR_ENTITY: 'Twenty.com PBC',
+  PROCESSOR_ENTITY: 'GRIX CRM PBC',
   PROCESSOR_LEGAL_FORM:
     'a public benefit corporation under the laws of Delaware, USA',
   // The Delaware registered office and the SF notices address must stay distinct.
   PROCESSOR_ADDRESS:
     'c/o National Registered Agents, Inc., 1209 Orange Street, Wilmington, Delaware 19801, USA. For notices: 2261 Market Street #5275, San Francisco, California 94114, USA',
-  EU_AFFILIATE_ENTITY: 'Twenty.com SAS',
+  EU_AFFILIATE_ENTITY: 'GRIX CRM SAS',
   EU_AFFILIATE_LEGAL_FORM:
     'a société par actions simplifiée under the laws of France',
   EU_AFFILIATE_ADDRESS: '9 Rue des Colonnes, 75002 Paris, France',

@@ -98,8 +98,8 @@ const QUALIFICATION_QUESTIONS: AskQuestionItem[] = [
 
 const RENEWAL_REMINDER_EMAIL: SeededEmail = {
   to: 'procurement@stripe.com',
-  subject: 'Your Twenty renewal on October 31',
-  body: '<p>Hi Stripe team,</p><p>Your Twenty subscription renews on October 31 for another year at the same price. If you want to add seats or change plans before then, just reply to this email.</p><p>Best,<br>Phil</p>',
+  subject: 'Your GRIX CRM renewal on October 31',
+  body: '<p>Hi Stripe team,</p><p>Your GRIX CRM subscription renews on October 31 for another year at the same price. If you want to add seats or change plans before then, just reply to this email.</p><p>Best,<br>Phil</p>',
 };
 
 type AgentWorkflowToSeed = {

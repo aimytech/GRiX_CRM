@@ -9,11 +9,21 @@ type LogoProps = {
   i18n: I18n;
 };
 
+const getEmailLogoUrl = () => {
+  const serverUrl = (process.env.SERVER_URL ?? '').replace(/\/$/, '');
+
+  if (serverUrl.length > 0) {
+    return `${serverUrl}/images/grix/logo.png`;
+  }
+
+  return '/images/grix/logo.png';
+};
+
 export const Logo = ({ i18n }: LogoProps) => {
   return (
     <Img
-      src="https://app.twenty.com/images/icons/windows11/Square150x150Logo.scale-100.png"
-      alt={i18n._('Twenty logo')}
+      src={getEmailLogoUrl()}
+      alt={i18n._('GRIX CRM logo')}
       width="40"
       height="40"
       style={logoStyle}

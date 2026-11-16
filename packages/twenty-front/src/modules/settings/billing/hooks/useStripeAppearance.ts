@@ -3,7 +3,7 @@ import { isDefined } from 'twenty-shared/utils';
 import { THEME_DARK, THEME_LIGHT, useThemeColorScheme } from 'twenty-ui/theme';
 
 // Stripe's Appearance API rejects CSS color(display-p3 ...) values, which is
-// how the Twenty theme stores colors; map them to sRGB so the PaymentElement
+// how the GRIX CRM theme stores colors; map them to sRGB so the PaymentElement
 // is themed instead of silently falling back to Stripe defaults.
 const toStripeColor = (color: string): string => {
   const match = color.match(

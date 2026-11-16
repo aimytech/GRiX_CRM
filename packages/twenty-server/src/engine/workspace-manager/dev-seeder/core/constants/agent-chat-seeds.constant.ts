@@ -21,7 +21,7 @@ export const APPLE_AGENT_CHAT_CONVERSATION_SEEDS: AgentChatConversationSeed[] =
         ],
         [
           'Which columns should I include?',
-          '## Recommended columns\n\n| Source column | Twenty field | Example |\n| --- | --- | --- |\n| Company | Name | Acme Studio |\n| Website | Domain name | acme.example |\n| City | Address city | Paris |\n| Country | Address country | France |\n| Employees | Employees | 50 |\n| Annual revenue | Annual revenue | 1200000 |\n\nKeep one company per row and put contact details in a separate sheet.',
+          '## Recommended columns\n\n| Source column | GRIX CRM field | Example |\n| --- | --- | --- |\n| Company | Name | Acme Studio |\n| Website | Domain name | acme.example |\n| City | Address city | Paris |\n| Country | Address country | France |\n| Employees | Employees | 50 |\n| Annual revenue | Annual revenue | 1200000 |\n\nKeep one company per row and put contact details in a separate sheet.',
         ],
         [
           'How should I clean the domains?',

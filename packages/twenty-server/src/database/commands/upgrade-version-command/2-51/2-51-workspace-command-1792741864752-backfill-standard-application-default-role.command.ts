@@ -14,7 +14,7 @@ import { STANDARD_ROLE } from 'src/engine/workspace-manager/twenty-standard-appl
 @Command({
   name: 'upgrade:2-51:backfill-standard-application-default-role',
   description:
-    'Set Admin as the default role of the Twenty standard application',
+    'Set Admin as the default role of the GRIX CRM standard application',
 })
 export class BackfillStandardApplicationDefaultRoleCommand extends ProvisionedWorkspaceCommandRunner {
   constructor(

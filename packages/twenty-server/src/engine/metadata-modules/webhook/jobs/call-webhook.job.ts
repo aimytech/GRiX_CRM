@@ -89,13 +89,13 @@ export class CallWebhookJob {
       const { secret, ...payloadWithoutSecret } = data;
 
       if (secret) {
-        headers['X-Twenty-Webhook-Timestamp'] = Date.now().toString();
-        headers['X-Twenty-Webhook-Signature'] = this.generateSignature(
+        headers['X-GRIX CRM-Webhook-Timestamp'] = Date.now().toString();
+        headers['X-GRIX CRM-Webhook-Signature'] = this.generateSignature(
           payloadWithoutSecret,
           secret,
-          headers['X-Twenty-Webhook-Timestamp'],
+          headers['X-GRIX CRM-Webhook-Timestamp'],
         );
-        headers['X-Twenty-Webhook-Nonce'] = crypto
+        headers['X-GRIX CRM-Webhook-Nonce'] = crypto
           .randomBytes(16)
           .toString('hex');
       }

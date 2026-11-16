@@ -51,4 +51,17 @@ describe('getLogoUrlFromDomainName', () => {
   test('should handle undefined input', () => {
     expect(getLogoUrlFromDomainName(undefined)).toBe(undefined);
   });
+
+  test('uses the GRIX logo for grixsales domains', () => {
+    expect(getLogoUrlFromDomainName('grixsales.com')).toBe(
+      '/images/grix/logo.png',
+    );
+    expect(getLogoUrlFromDomainName('dev.grixsales.com')).toBe(
+      '/images/grix/logo.png',
+    );
+    expect(getLogoUrlFromDomainName('https://www.dev.grixsales.com/')).toBe(
+      '/images/grix/logo.png',
+    );
+  });
 });
+
